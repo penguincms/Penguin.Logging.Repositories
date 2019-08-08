@@ -5,7 +5,7 @@ using Penguin.Persistence.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Framework.Persistence.EntityFramework.Repositories
+namespace Penguin.Logging.Repositories
 {
     /// <summary>
     /// An implementation of an IRepository for persisting logging messages
