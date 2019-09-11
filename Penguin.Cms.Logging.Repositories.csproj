@@ -5,15 +5,18 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>http://www.penguinms.com/Nuget</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Logging.Repositories</PackageProjectUrl>
     <PackageIconUrl>http://www.penguinms.com/client/images/pg.png</PackageIconUrl>
     <Version>1.0.4</Version>
+	<IncludeSymbols>true</IncludeSymbols>    
+<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
     <Description>IRepository implementation for persisting logging information to a database (or other provider)</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Penguin.Cms.Logging.Entities" Version="1.0.2" />
-    <PackageReference Include="Penguin.Persistence.Repositories" Version="1.1.12" />
+    <PackageReference Include="Penguin.Persistence.Repositories" Version="1.2.2" />
   </ItemGroup>
 
  <ItemGroup>
@@ -24,10 +27,10 @@
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningsAsErrors>NU1605, CS1591</WarningsAsErrors>
-    <DocumentationFile>C:\SVN\Framework\Nuget\Penguin.Logging.Repositories\Penguin.Cms.Logging.Repositories.xml</DocumentationFile>
+    <DocumentationFile>Penguin.Cms.Logging.Repositories.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>full</DebugType>
-    <DocumentationFile>C:\SVN\Framework\Nuget\Penguin.Logging.Repositories\Penguin.Cms.Logging.Repositories.xml</DocumentationFile>
+    <DocumentationFile>Penguin.Cms.Logging.Repositories.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

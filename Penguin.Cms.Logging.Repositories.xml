@@ -4,33 +4,33 @@
         <name>Penguin.Cms.Logging.Repositories</name>
     </assembly>
     <members>
-        <member name="T:Framework.Persistence.EntityFramework.Repositories.LogEntryRepository">
+        <member name="T:Penguin.Logging.Repositories.LogEntryRepository">
             <summary>
             An implementation of an IRepository for persisting logging messages
             </summary>
         </member>
-        <member name="M:Framework.Persistence.EntityFramework.Repositories.LogEntryRepository.#ctor(Penguin.Persistence.Abstractions.Interfaces.IPersistenceContext{Penguin.Cms.Logging.Entities.LogEntry},Penguin.Messaging.Core.MessageBus)">
+        <member name="M:Penguin.Logging.Repositories.LogEntryRepository.#ctor(Penguin.Persistence.Abstractions.Interfaces.IPersistenceContext{Penguin.Cms.Logging.Entities.LogEntry},Penguin.Messaging.Core.MessageBus)">
             <summary>
             Constructs a new instance of this repository
             </summary>
             <param name="context">The backing persistence context to use for logged messages</param>
             <param name="messageBus">An optional message bus for sending out persistence messages</param>
         </member>
-        <member name="M:Framework.Persistence.EntityFramework.Repositories.LogEntryRepository.GetByCaller(System.String)">
+        <member name="M:Penguin.Logging.Repositories.LogEntryRepository.GetByCaller(System.String)">
             <summary>
             Gets all messages logged by a given caller (Type.ToString())
             </summary>
             <param name="caller">The Type.ToString() for the object that did the logging</param>
             <returns>All messages requested by the given caller</returns>
         </member>
-        <member name="M:Framework.Persistence.EntityFramework.Repositories.LogEntryRepository.GetBySession(System.String)">
+        <member name="M:Penguin.Logging.Repositories.LogEntryRepository.GetBySession(System.String)">
             <summary>
             Gets all messages logged as part of a single session
             </summary>
             <param name="session">The session id for the messages to be retrieved</param>
             <returns>All the messages logged as part of this session</returns>
         </member>
-        <member name="M:Framework.Persistence.EntityFramework.Repositories.LogEntryRepository.GetDistinctCallers">
+        <member name="M:Penguin.Logging.Repositories.LogEntryRepository.GetDistinctCallers">
             <summary>
             Gets a list of all the distinct options for callers of the message logger
             To use as parameters in GetByCaller
