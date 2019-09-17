@@ -12,8 +12,6 @@ namespace Penguin.Logging.Repositories
     /// </summary>
     public class LogEntryRepository : KeyedObjectRepository<LogEntry>
     {
-        #region Constructors
-
         /// <summary>
         /// Constructs a new instance of this repository
         /// </summary>
@@ -22,10 +20,6 @@ namespace Penguin.Logging.Repositories
         public LogEntryRepository(IPersistenceContext<LogEntry> context, MessageBus messageBus = null) : base(context, messageBus)
         {
         }
-
-        #endregion Constructors
-
-        #region Methods
 
         /// <summary>
         /// Gets all messages logged by a given caller (Type.ToString())
@@ -47,7 +41,5 @@ namespace Penguin.Logging.Repositories
         /// </summary>
         /// <returns>A list of all distinct callers of the message logger</returns>
         public List<string> GetDistinctCallers() => this.Select(c => c.Caller).Distinct().ToList();
-
-        #endregion Methods
     }
 }
